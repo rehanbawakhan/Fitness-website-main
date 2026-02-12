@@ -561,12 +561,8 @@
     </div>
 
     <script>
-        // ========== ✅ GROQ CLOUD API - CORRECT FORMAT, PROPERLY CONFIGURED ==========
-        // Your Groq API key - format is correct (gsk_...)
-        const GROQ_API_KEY = "";
-        
-        // Groq API endpoint - properly configured
-        const Api_Url = "https://api.groq.com/openai/v1/chat/completions";
+        // ========== GROQ API VIA BACKEND PROXY ==========
+        const Api_Url = "/api/groq-chat";
         
         // Groq model - using Llama 3.3 70B (fastest, most capable)
         const GROQ_MODEL = "llama-3.3-70b-versatile";
@@ -840,16 +836,13 @@
             };
             
             try {
-                console.log('🚀 Sending request to Groq API...');
+                console.log('🚀 Sending request to Groq API via backend...');
                 console.log('📍 API URL:', Api_Url);
                 console.log('🤖 Model:', GROQ_MODEL);
-                console.log('🔑 Key format valid:', GROQ_API_KEY.startsWith('gsk_'));
-                
                 const response = await fetch(Api_Url, {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${GROQ_API_KEY}`
+                        "Content-Type": "application/json"
                     },
                     body: JSON.stringify(requestBody),
                     signal
@@ -933,7 +926,7 @@
                         // Retry with fallback model (simplified - in production you'd want a proper retry)
                     }
                 } else {
-                    textEl.innerHTML = `⚠️ Groq API Error: ${error.message || 'Connection failed'}. Your key format is correct (gsk_...), endpoint is https://api.groq.com. Groq is typically very reliable.`;
+                    textEl.innerHTML = `⚠️ Groq API Error: ${error.message || 'Connection failed'}. Please try again.`;
                 }
                 
                 isGenerating = false;
@@ -1122,10 +1115,9 @@
         loadHistory();
         ttsToggle.classList.add('active');
         
-        // Confirm Groq API key is loaded and properly formatted
+        // Confirm Groq API proxy is configured
         console.log('%c✅ GROQ API CONFIGURATION', 'background: #ff6b35; color: white; padding: 4px; border-radius: 4px;');
-        console.log('   - Key present:', GROQ_API_KEY ? '✓' : '✗');
-        console.log('   - Key format valid (starts with gsk_):', GROQ_API_KEY.startsWith('gsk_') ? '✓' : '✗');
+        console.log('   - Key present: server-side (.env)');
         console.log('   - API Endpoint:', Api_Url);
         console.log('   - Model:', GROQ_MODEL);
         console.log('%c🚀 GYMPANION ready with Groq (Llama 3.3 70B)', 'color: #ffaf8a; font-weight: bold;');

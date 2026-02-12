@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
-  <title>FitLife · ELITE GYM · OFFLINE MEMBERSHIP + PROFILE</title>
+  <title>FitLife Â· ELITE GYM Â· OFFLINE MEMBERSHIP + PROFILE</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -95,7 +95,7 @@
       padding: 15px;
       border-radius: 10px;
     }
-    /* AI FLOATING BUTTON – 100% ORIGINAL */
+    /* AI FLOATING BUTTON â€“ 100% ORIGINAL */
     .ai-chat-float {
       position: fixed;
       bottom: 30px;
@@ -132,7 +132,7 @@
       transition: opacity 0.3s ease;
     }
     .ai-chat-float:hover::after { opacity: 1; }
-    /* ===== THREE LINES LEFT TOP CORNER – PERFECT SMALL LINE ===== */
+    /* ===== THREE LINES LEFT TOP CORNER â€“ PERFECT SMALL LINE ===== */
     .top-left-menu {
       position: fixed;
       top: 27px;
@@ -157,7 +157,7 @@
       background: rgba(255, 102, 0, 0.8);
       transform: scale(1.05);
     }
-    /* DRAWER – original preserved */
+    /* DRAWER â€“ original preserved */
     .drawer {
       position: fixed;
       top: 0;
@@ -223,7 +223,7 @@
       gap: 14px; padding: 12px 18px; border-radius: 12px; transition: 0.2s;
     }
     .drawer-footer a:hover { background: rgba(255, 70, 70, 0.25); }
-    /* ---------- EXTRA GYM CONTENT – untouched ---------- */
+    /* ---------- EXTRA GYM CONTENT â€“ untouched ---------- */
     .gym-stats-advanced, .lifting-leaderboard, .exercise-database, .recovery-zone, .nutrition-gym, .monthly-challenge {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -253,7 +253,28 @@
       height: 2px; background: linear-gradient(90deg, transparent, #ff9966, transparent);
       margin: 30px 0 10px; opacity: 0.5;
     }
-    /* ---------- 🆕 OFFLINE GYM MEMBERSHIP – COMPLETE INFO, ADDRESS, PURCHASE ---------- */
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 8px;
+    }
+    .quick-nav a {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255, 153, 102, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    .quick-nav a:hover {
+      background: rgba(255, 102, 0, 0.45);
+      border-color: #ff9966;
+      transform: translateY(-1px);
+    }
+    /* ---------- ðŸ†• OFFLINE GYM MEMBERSHIP â€“ COMPLETE INFO, ADDRESS, PURCHASE ---------- */
     .membership-panel {
       background: rgba(12, 15, 22, 0.95);
       backdrop-filter: blur(16px);
@@ -416,14 +437,14 @@
   </style>
 </head>
 <body>
-  <!-- BACKGROUND IMAGE LAYERS – 100% UNCHANGED -->
+  <!-- BACKGROUND IMAGE LAYERS â€“ 100% UNCHANGED -->
   <div id="bg-image"></div>
   <div id="bg-image-next"></div>
   
-  <!-- AI FLOATING BUTTON – untouched -->
+  <!-- AI FLOATING BUTTON â€“ untouched -->
   <a href="ai.html" class="ai-chat-float"><i class="fas fa-robot"></i></a>
 
-  <!-- THREE LINES LEFT TOP CORNER – perfect placement -->
+  <!-- THREE LINES LEFT TOP CORNER â€“ perfect placement -->
   <div class="top-left-menu" id="menuBars"><i class="fas fa-bars"></i></div>
 
   <!-- OVERLAY + DRAWER (original navigation FULLY PRESERVED) -->
@@ -440,9 +461,9 @@
         <li><a href="#nutrition-section"><i class="fas fa-utensils"></i> Nutrition</a></li>
         <li><a href="product1.html"><i class="fas fa-capsules"></i> Products</a></li>
         <li><a href="#progress-section"><i class="fas fa-chart-line"></i> Progress</a></li>
-        <!-- 🆕 SETTINGS LINK: opens profile settings with avatar upload (FILE INPUT) -->
+        <!-- ðŸ†• SETTINGS LINK: opens profile settings with avatar upload (FILE INPUT) -->
         <li><a href="#" id="settingsDrawerLink"><i class="fas fa-cog"></i> Profile Settings</a></li>
-        <!-- 🆕 OFFLINE GYM LINK: opens membership panel -->
+        <!-- ðŸ†• OFFLINE GYM LINK: opens membership panel -->
         <li><a href="#" id="membershipDrawerLink"><i class="fas fa-dumbbell"></i> Offline Gyms</a></li>
         <li><a href="ai.html" class="ai-chat-drawer"><i class="fas fa-robot"></i> AI Assistant</a></li>
       </ul>
@@ -450,22 +471,30 @@
     <div class="drawer-footer"><a href="Login.html" id="drawerLogoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></div>
   </div>
 
-  <!-- MAIN DASHBOARD – FULL WIDTH, ORIGINAL CONTENT + SETTINGS + MEMBERSHIP -->
+  <!-- MAIN DASHBOARD â€“ FULL WIDTH, ORIGINAL CONTENT + SETTINGS + MEMBERSHIP -->
   <div class="dashboard-container">
     <main class="main-content">
 
-      <!-- ***** WELCOME HEADER – ORIGINAL (unchanged) ***** -->
+      <!-- ***** WELCOME HEADER â€“ ORIGINAL (unchanged) ***** -->
       <header id="welcome-section">
         <div class="header-profile">
           <img src="https://hips.hearstapps.com/hmg-prod/images/mh-3-23-coleman-1648059910.png?crop=0.5xw:1xh;center,top&resize=1200:*" alt="User Profile" id="headerProfileImg">
           <div>
             <h1><i class="fas fa-dumbbell"></i> Welcome, <span id="usernameDisplay">Alex</span></h1>
-            <p>Your fitness journey starts now · ELITE GYM</p>
+            <p>Your fitness journey starts now Â· ELITE GYM</p>
           </div>
         </div>
       </header>
+      <nav class="quick-nav" aria-label="Section guide">
+        <a href="#workout-section">Workout Plan</a>
+        <a href="#nutrition-section">Nutrition Tips</a>
+        <a href="#progress-section">Progress Tracker</a>
+        <a href="#powerlifting-section">Powerlifting & Strongman Metrics</a>
+        <a href="#recovery-section">Recovery & Mobility</a>
+        <a href="#ai-insights-section">AI Coach Insights</a>
+      </nav>
 
-      <!-- ***** WORKOUT SECTION – ORIGINAL ***** -->
+      <!-- ***** WORKOUT SECTION â€“ ORIGINAL ***** -->
       <section id="workout-section" class="workout-plan card">
         <h2><i class="fas fa-dumbbell"></i> Sample Workout Plan</h2>
         <div class="workout-days">
@@ -484,14 +513,14 @@
         <div class="workout-card card hidden" id="friday-exercises"><h3>Full Body Workout</h3><ul><li>Push-ups: 15 reps</li><li>Bodyweight Squats: 20 reps</li><li>Bent-over Rows: 12 reps</li><li>Plank: 45 seconds</li><li>Jumping Jacks: 30 seconds</li></ul></div>
       </div>
 
-      <!-- ***** NUTRITION SECTION – ORIGINAL ***** -->
+      <!-- ***** NUTRITION SECTION â€“ ORIGINAL ***** -->
       <section id="nutrition-section" class="nutrition-tips card">
         <h2><i class="fas fa-apple-alt"></i> Nutrition Tips</h2>
-        <div class="nutrition-grid"><div class="tip"><h3>Protein Intake</h3><p>Aim for 0.8–1g of protein per pound of body weight.</p></div><div class="tip"><h3>Hydration</h3><p>Drink half your body weight in oz of water daily.</p></div><div class="tip"><h3>Whole Foods</h3><p>Focus on whole, unprocessed foods.</p></div><div class="tip"><h3>Meal Timing</h3><p>Eat every 3–4 hours to sustain energy.</p></div></div>
+        <div class="nutrition-grid"><div class="tip"><h3>Protein Intake</h3><p>Aim for 0.8â€“1g of protein per pound of body weight.</p></div><div class="tip"><h3>Hydration</h3><p>Drink half your body weight in oz of water daily.</p></div><div class="tip"><h3>Whole Foods</h3><p>Focus on whole, unprocessed foods.</p></div><div class="tip"><h3>Meal Timing</h3><p>Eat every 3â€“4 hours to sustain energy.</p></div></div>
         <div class="sample-meal"><h3>Sample Meal Plan</h3><div class="meal-plan"><div class="meal"><h4>Breakfast</h4><p>Oatmeal with berries and protein.</p></div><div class="meal"><h4>Lunch</h4><p>Grilled chicken with quinoa and veggies.</p></div><div class="meal"><h4>Snack</h4><p>Greek yogurt with nuts.</p></div><div class="meal"><h4>Dinner</h4><p>Salmon with sweet potato and broccoli.</p></div></div></div>
       </section>
 
-      <!-- ***** PROGRESS + BMI – ORIGINAL ***** -->
+      <!-- ***** PROGRESS + BMI â€“ ORIGINAL ***** -->
       <section id="progress-section" class="progress-tracker card">
         <h2><i class="fas fa-chart-line"></i> Progress Tracker</h2>
         <div class="progress-metrics"><div class="metric"><h3>Workouts This Week</h3><div class="progress-circle" data-value="216"><span>3/5</span></div></div><div class="metric"><h3>Weight</h3><div class="progress-number"><span>165 <small>lbs</small></span><br><small>Down 5lbs this month</small></div></div><div class="metric"><h3>Water Intake</h3><div class="progress-circle" data-value="288"><span>80%</span></div></div></div>
@@ -499,26 +528,26 @@
         <div class="bmi-calculator" style="margin-top: 30px;"><h3>Calculate Your BMI</h3><form id="bmiForm"><label for="bmiWeight">Weight (kg):</label><input type="number" id="bmiWeight" required style="margin-right:10px; padding:5px;" /><label for="bmiHeight">Height (cm):</label><input type="number" id="bmiHeight" required style="margin-right:10px; padding:5px;" /><button type="submit" style="padding:5px 10px; background:#ff6600; color:white; border:none; border-radius:5px;">Calculate</button></form><div id="bmiResult" style="margin-top:15px; font-weight:bold;"></div></div>
       </section>
 
-      <!-- ========== 🚀 200+ GYM LINES (PRESERVED) ========== -->
+      <!-- ========== ðŸš€ 200+ GYM LINES (PRESERVED) ========== -->
       <div class="hr-divider"></div>
-      <section class="card"><h2><i class="fas fa-chart-pie"></i> Powerlifting & Strongman Metrics</h2><div class="gym-stats-advanced"><div class="gym-card"><i class="fas fa-weight-hanging" style="font-size:2rem; color:#ff9966;"></i><h3>Total Tonnage</h3><p style="font-size:1.9rem; font-weight:700;">18,450 kg</p><small>this week ↑ 8%</small><div class="progress-bar-bg"><div class="progress-fill" style="width:78%;"></div></div></div><div class="gym-card"><i class="fas fa-bolt" style="font-size:2rem; color:#ffcc66;"></i><h3>Estimated 1RM</h3><p><span style="font-size:1.6rem; font-weight:700;">Bench 130kg</span><br>Squat 170kg · Deadlift 210kg</p></div><div class="gym-card"><i class="fas fa-heartbeat" style="font-size:2rem; color:#ff6666;"></i><h3>Intensity (RPE)</h3><p>Avg 7.8 · Peak 9.2</p><div class="badge">+6% vs last cycle</div></div><div class="gym-card"><i class="fas fa-clock" style="font-size:2rem;"></i><h3>Rest periods</h3><p>3:15 min (compound) · 2:00 min (accessory)</p></div></div></section>
-      <section class="card"><h2><i class="fas fa-trophy"></i> Gym Leaderboard – 2026</h2><div class="lifting-leaderboard"><div class="record-card"><h3>🏆 Bench Press</h3><p style="font-size:2rem;">140 kg</p><small>PR +5kg this month</small><div class="progress-bar-bg"><div class="progress-fill" style="width:90%;"></div></div></div><div class="record-card"><h3>🏆 Squat (raw)</h3><p style="font-size:2rem;">182 kg</p><small>ATg 5cm depth</small><div class="progress-bar-bg"><div class="progress-fill" style="width:78%;"></div></div></div><div class="record-card"><h3>🏆 Deadlift</h3><p style="font-size:2rem;">225 kg</p><small>straps PR</small><div class="progress-bar-bg"><div class="progress-fill" style="width:82%;"></div></div></div><div class="record-card"><h3>🏆 Strict OHP</h3><p style="font-size:2rem;">82.5 kg</p><small>standing</small><div class="progress-bar-bg"><div class="progress-fill" style="width:70%;"></div></div></div></div></section>
-      <section class="card"><h2><i class="fas fa-dumbbell"></i> Exercise Library – 200+ movements</h2><div class="exercise-database"><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Barbell back squat</strong> – high bar · low bar</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Conventional deadlift</strong> – sumo variant</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Weighted dip</strong> – +45lbs 3x8</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Barbell hip thrust</strong> – glute focus</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Landmine press</strong> – unilateral</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Zercher squat</strong> – core stability</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Snatch grip deadlift</strong> – ROM</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Bulgarian split squat</strong> – 3x10/leg</div></div><p style="margin-top:16px;"><i class="fas fa-robot"></i> AI recommends: try paused squats this week</p></section>
-      <section class="card"><h2><i class="fas fa-spa"></i> Recovery & Mobility Hub</h2><div class="recovery-zone"><div class="recovery-card"><i class="fas fa-hot-tub"></i> <h3>Contrast therapy</h3><p>3x week · 2min cold / 3min hot</p></div><div class="recovery-card"><i class="fas fa-hand-holding-heart"></i> <h3>Stretching</h3><p>Lower body: 12min · Upper body: 8min</p></div><div class="recovery-card"><i class="fas fa-bed"></i> <h3>Sleep tracker</h3><p>7h58 avg · HRV 68ms</p><div class="badge">+12% this month</div></div><div class="recovery-card"><i class="fas fa-bicycle"></i> <h3>Active recovery</h3><p>Saturday: 40min zone2 cycling</p></div></div></section>
-      <section class="card"><h2><i class="fas fa-utensils"></i> Precision Nutrition – muscle gain</h2><div class="nutrition-gym"><div class="nutrition-gym-card"><h3>🍗 Protein timing</h3><p>40g per meal · 4x daily · 1.6g/kg</p></div><div class="nutrition-gym-card"><h3>🥑 Fats</h3><p>0.9g/kg · mainly mono/poly</p></div><div class="nutrition-gym-card"><h3>🍚 Carbs</h3><p>5g/kg training days · 4g/kg rest</p></div><div class="nutrition-gym-card"><h3>💊 Supplements</h3><p>Creatine 5g · Vit D3 2000IU · Omega-3 2g</p></div><div class="nutrition-gym-card"><h3>🧂 Electrolytes</h3><p>Sodium 4g · Potassium 3.5g · Magnesium 400mg</p></div><div class="nutrition-gym-card"><h3>⏱️ Peri-workout</h3><p>20g EAA + 30g carbs intra</p></div></div></section>
-      <section class="card"><h2><i class="fas fa-fire"></i> March Challenge – 5000 reps</h2><div class="monthly-challenge"><div class="challenge-card"><h3>🔥 Push-ups</h3><p>1,240 / 2,000</p><div class="progress-bar-bg"><div class="progress-fill" style="width:62%;"></div></div></div><div class="challenge-card"><h3>🔥 Pull-ups</h3><p>380 / 600</p><div class="progress-bar-bg"><div class="progress-fill" style="width:63%;"></div></div></div><div class="challenge-card"><h3>🔥 Squats</h3><p>1,800 / 2,400</p><div class="progress-bar-bg"><div class="progress-fill" style="width:75%;"></div></div></div><div class="challenge-card"><h3>🔥 Streak</h3><p>14 days · 🔥 2x personal best</p><i class="fas fa-crown" style="color:gold;"></i></div></div></section>
-      <section class="card"><h2><i class="fas fa-medal"></i> FitZone achievements</h2><div style="display:flex; gap:20px; flex-wrap:wrap;"><span class="badge"><i class="fas fa-check"></i> 1000lb club</span><span class="badge"><i class="fas fa-check"></i> 500 workouts</span><span class="badge"><i class="fas fa-check"></i> 12 week streak</span><span class="badge"><i class="fas fa-check"></i> Body fat ↓4%</span><span class="badge"><i class="fas fa-check"></i> Deadlift 2.2x BW</span><span class="badge"><i class="fas fa-check"></i> Marathon sub 4h</span></div><div style="margin-top:24px; background:rgba(255,102,0,0.2); padding:16px; border-radius:20px;"><i class="fas fa-calendar-alt"></i> Next milestone: 10,000 total reps (March) – 73% complete<div class="progress-bar-bg" style="margin-top:10px;"><div class="progress-fill" style="width:73%;"></div></div></div></section>
-      <section class="card"><h2><i class="fas fa-robot"></i> AI Coach insights</h2><div style="display: grid; grid-template-columns: 1fr 1fr; gap:20px;"><div><i class="fas fa-arrow-up" style="color:#4caf50;"></i> Increase deadlift volume by 12% this week</div><div><i class="fas fa-clock"></i> Reduce rest on accessories to 75s</div><div><i class="fas fa-apple-alt"></i> Add 50g carbs pre-workout</div><div><i class="fas fa-bed"></i> Sleep consistency: +1h on weekends</div><div><i class="fas fa-heart"></i> HRV suggests light cardio today</div><div><i class="fas fa-dumbbell"></i> Try spoto press for triceps</div></div></section>
-      <section class="card"><h2><i class="fas fa-flag-checkered"></i> 2026 yearly goal</h2><div style="display:flex; align-items:center; gap:30px; flex-wrap:wrap;"><div class="progress-circle" data-value="270" style="width:100px; height:100px;"><span>75%</span></div><div><h3>Total tonnage target: 1,000,000 kg</h3><p>750,450 kg lifted · 75% complete</p><div class="progress-bar-bg" style="width:250px;"><div class="progress-fill" style="width:75%;"></div></div></div></div></section>
+      <section id="powerlifting-section" class="card"><h2><i class="fas fa-chart-pie"></i> Powerlifting & Strongman Metrics</h2><div class="gym-stats-advanced"><div class="gym-card"><i class="fas fa-weight-hanging" style="font-size:2rem; color:#ff9966;"></i><h3>Total Tonnage</h3><p style="font-size:1.9rem; font-weight:700;">18,450 kg</p><small>this week â†‘ 8%</small><div class="progress-bar-bg"><div class="progress-fill" style="width:78%;"></div></div></div><div class="gym-card"><i class="fas fa-bolt" style="font-size:2rem; color:#ffcc66;"></i><h3>Estimated 1RM</h3><p><span style="font-size:1.6rem; font-weight:700;">Bench 130kg</span><br>Squat 170kg Â· Deadlift 210kg</p></div><div class="gym-card"><i class="fas fa-heartbeat" style="font-size:2rem; color:#ff6666;"></i><h3>Intensity (RPE)</h3><p>Avg 7.8 Â· Peak 9.2</p><div class="badge">+6% vs last cycle</div></div><div class="gym-card"><i class="fas fa-clock" style="font-size:2rem;"></i><h3>Rest periods</h3><p>3:15 min (compound) Â· 2:00 min (accessory)</p></div></div></section>
+      <section class="card"><h2><i class="fas fa-trophy"></i> Gym Leaderboard â€“ 2026</h2><div class="lifting-leaderboard"><div class="record-card"><h3>ðŸ† Bench Press</h3><p style="font-size:2rem;">140 kg</p><small>PR +5kg this month</small><div class="progress-bar-bg"><div class="progress-fill" style="width:90%;"></div></div></div><div class="record-card"><h3>ðŸ† Squat (raw)</h3><p style="font-size:2rem;">182 kg</p><small>ATg 5cm depth</small><div class="progress-bar-bg"><div class="progress-fill" style="width:78%;"></div></div></div><div class="record-card"><h3>ðŸ† Deadlift</h3><p style="font-size:2rem;">225 kg</p><small>straps PR</small><div class="progress-bar-bg"><div class="progress-fill" style="width:82%;"></div></div></div><div class="record-card"><h3>ðŸ† Strict OHP</h3><p style="font-size:2rem;">82.5 kg</p><small>standing</small><div class="progress-bar-bg"><div class="progress-fill" style="width:70%;"></div></div></div></div></section>
+      <section class="card"><h2><i class="fas fa-dumbbell"></i> Exercise Library â€“ 200+ movements</h2><div class="exercise-database"><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Barbell back squat</strong> â€“ high bar Â· low bar</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Conventional deadlift</strong> â€“ sumo variant</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Weighted dip</strong> â€“ +45lbs 3x8</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Barbell hip thrust</strong> â€“ glute focus</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Landmine press</strong> â€“ unilateral</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Zercher squat</strong> â€“ core stability</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Snatch grip deadlift</strong> â€“ ROM</div><div class="exercise-card"><i class="fas fa-check-circle" style="color:#32cd32;"></i> <strong>Bulgarian split squat</strong> â€“ 3x10/leg</div></div><p style="margin-top:16px;"><i class="fas fa-robot"></i> AI recommends: try paused squats this week</p></section>
+      <section id="recovery-section" class="card"><h2><i class="fas fa-spa"></i> Recovery & Mobility Hub</h2><div class="recovery-zone"><div class="recovery-card"><i class="fas fa-hot-tub"></i> <h3>Contrast therapy</h3><p>3x week Â· 2min cold / 3min hot</p></div><div class="recovery-card"><i class="fas fa-hand-holding-heart"></i> <h3>Stretching</h3><p>Lower body: 12min Â· Upper body: 8min</p></div><div class="recovery-card"><i class="fas fa-bed"></i> <h3>Sleep tracker</h3><p>7h58 avg Â· HRV 68ms</p><div class="badge">+12% this month</div></div><div class="recovery-card"><i class="fas fa-bicycle"></i> <h3>Active recovery</h3><p>Saturday: 40min zone2 cycling</p></div></div></section>
+      <section class="card"><h2><i class="fas fa-utensils"></i> Precision Nutrition â€“ muscle gain</h2><div class="nutrition-gym"><div class="nutrition-gym-card"><h3>ðŸ— Protein timing</h3><p>40g per meal Â· 4x daily Â· 1.6g/kg</p></div><div class="nutrition-gym-card"><h3>ðŸ¥‘ Fats</h3><p>0.9g/kg Â· mainly mono/poly</p></div><div class="nutrition-gym-card"><h3>ðŸš Carbs</h3><p>5g/kg training days Â· 4g/kg rest</p></div><div class="nutrition-gym-card"><h3>ðŸ’Š Supplements</h3><p>Creatine 5g Â· Vit D3 2000IU Â· Omega-3 2g</p></div><div class="nutrition-gym-card"><h3>ðŸ§‚ Electrolytes</h3><p>Sodium 4g Â· Potassium 3.5g Â· Magnesium 400mg</p></div><div class="nutrition-gym-card"><h3>â±ï¸ Peri-workout</h3><p>20g EAA + 30g carbs intra</p></div></div></section>
+      <section class="card"><h2><i class="fas fa-fire"></i> March Challenge â€“ 5000 reps</h2><div class="monthly-challenge"><div class="challenge-card"><h3>ðŸ”¥ Push-ups</h3><p>1,240 / 2,000</p><div class="progress-bar-bg"><div class="progress-fill" style="width:62%;"></div></div></div><div class="challenge-card"><h3>ðŸ”¥ Pull-ups</h3><p>380 / 600</p><div class="progress-bar-bg"><div class="progress-fill" style="width:63%;"></div></div></div><div class="challenge-card"><h3>ðŸ”¥ Squats</h3><p>1,800 / 2,400</p><div class="progress-bar-bg"><div class="progress-fill" style="width:75%;"></div></div></div><div class="challenge-card"><h3>ðŸ”¥ Streak</h3><p>14 days Â· ðŸ”¥ 2x personal best</p><i class="fas fa-crown" style="color:gold;"></i></div></div></section>
+      <section class="card"><h2><i class="fas fa-medal"></i> FitZone achievements</h2><div style="display:flex; gap:20px; flex-wrap:wrap;"><span class="badge"><i class="fas fa-check"></i> 1000lb club</span><span class="badge"><i class="fas fa-check"></i> 500 workouts</span><span class="badge"><i class="fas fa-check"></i> 12 week streak</span><span class="badge"><i class="fas fa-check"></i> Body fat â†“4%</span><span class="badge"><i class="fas fa-check"></i> Deadlift 2.2x BW</span><span class="badge"><i class="fas fa-check"></i> Marathon sub 4h</span></div><div style="margin-top:24px; background:rgba(255,102,0,0.2); padding:16px; border-radius:20px;"><i class="fas fa-calendar-alt"></i> Next milestone: 10,000 total reps (March) â€“ 73% complete<div class="progress-bar-bg" style="margin-top:10px;"><div class="progress-fill" style="width:73%;"></div></div></div></section>
+      <section id="ai-insights-section" class="card"><h2><i class="fas fa-robot"></i> AI Coach insights</h2><div style="display: grid; grid-template-columns: 1fr 1fr; gap:20px;"><div><i class="fas fa-arrow-up" style="color:#4caf50;"></i> Increase deadlift volume by 12% this week</div><div><i class="fas fa-clock"></i> Reduce rest on accessories to 75s</div><div><i class="fas fa-apple-alt"></i> Add 50g carbs pre-workout</div><div><i class="fas fa-bed"></i> Sleep consistency: +1h on weekends</div><div><i class="fas fa-heart"></i> HRV suggests light cardio today</div><div><i class="fas fa-dumbbell"></i> Try spoto press for triceps</div></div></section>
+      <section class="card"><h2><i class="fas fa-flag-checkered"></i> 2026 yearly goal</h2><div style="display:flex; align-items:center; gap:30px; flex-wrap:wrap;"><div class="progress-circle" data-value="270" style="width:100px; height:100px;"><span>75%</span></div><div><h3>Total tonnage target: 1,000,000 kg</h3><p>750,450 kg lifted Â· 75% complete</p><div class="progress-bar-bg" style="width:250px;"><div class="progress-fill" style="width:75%;"></div></div></div></div></section>
 
-      <!-- ========== 🆕 SETTINGS PANEL (HIDDEN initially, appears when Settings clicked, can be closed) ========== -->
+      <!-- ========== ðŸ†• SETTINGS PANEL (HIDDEN initially, appears when Settings clicked, can be closed) ========== -->
       <section id="settings-panel-section" class="settings-panel hidden">
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <div class="settings-title"><i class="fas fa-cog" style="color:#ff9966;"></i> Account Settings & Profile</div>
           <button id="closeSettingsBtn" class="close-settings-btn"><i class="fas fa-times"></i> Hide</button>
         </div>
         
-        <!-- PROFILE EDITOR – WITH FILE INPUT FOR AVATAR (exactly like original) -->
+        <!-- PROFILE EDITOR â€“ WITH FILE INPUT FOR AVATAR (exactly like original) -->
         <div class="profile-edit-section">
           <div style="display: flex; flex-direction: column; align-items: center;">
             <img src="https://hips.hearstapps.com/hmg-prod/images/mh-3-23-coleman-1648059910.png?crop=0.5xw:1xh;center,top&resize=1200:*" alt="Avatar" class="profile-avatar-large" id="settingsAvatarPreview">
@@ -552,7 +581,7 @@
             </div>
             <div class="field-group" style="grid-column: span 2;">
               <label><i class="fas fa-heart"></i> Bio</label>
-              <input type="text" id="profileBioInput" class="settings-input" placeholder="Dedicated lifter · ELITE GYM" value="Dedicated lifter · ELITE GYM">
+              <input type="text" id="profileBioInput" class="settings-input" placeholder="Dedicated lifter Â· ELITE GYM" value="Dedicated lifter Â· ELITE GYM">
             </div>
           </div>
           <div style="display: flex; gap: 16px; align-items: center; margin-left: auto;">
@@ -592,13 +621,13 @@
         </div>
       </section>
 
-      <!-- ========== 🆕 OFFLINE GYM MEMBERSHIP (REAL GYMS, ADDRESS, ALL INFO, PURCHASE) ========== -->
+      <!-- ========== ðŸ†• OFFLINE GYM MEMBERSHIP (REAL GYMS, ADDRESS, ALL INFO, PURCHASE) ========== -->
       <section id="membership-panel-section" class="membership-panel hidden">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-          <div class="membership-title"><i class="fas fa-map-pin" style="-webkit-text-fill-color: #ff9966;"></i> OFFLINE · ELITE GYM PARTNERS</div>
+          <div class="membership-title"><i class="fas fa-map-pin" style="-webkit-text-fill-color: #ff9966;"></i> OFFLINE Â· ELITE GYM PARTNERS</div>
           <button id="closeMembershipBtn" class="close-membership-btn"><i class="fas fa-times-circle"></i> Close</button>
         </div>
-        <p style="font-size:1.2rem; margin-bottom: 0; opacity:0.95;"><i class="fas fa-check-circle" style="color:#ff9966;"></i> Purchase membership directly – real locations, complete gym info, instant access.</p>
+        <p style="font-size:1.2rem; margin-bottom: 0; opacity:0.95;"><i class="fas fa-check-circle" style="color:#ff9966;"></i> Purchase membership directly â€“ real locations, complete gym info, instant access.</p>
         
         <div class="gym-listing-grid">
           <!-- GYM 1: METROFIT HARDCORE -->
@@ -606,7 +635,7 @@
             <div class="gym-name"><i class="fas fa-dumbbell" style="color:#ff9966;"></i> METROFIT HARDCORE</div>
             <div class="gym-address">
               <i class="fas fa-location-dot"></i> 451 Industrial Ave, Los Angeles, CA 90021<br>
-              <small style="opacity:0.8;">⏰ 24/7 · dedicated powerlifting room</small>
+              <small style="opacity:0.8;">â° 24/7 Â· dedicated powerlifting room</small>
             </div>
             <div class="gym-details">
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Eleiko competition plates</span>
@@ -614,65 +643,65 @@
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Strongman implements</span>
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Steam room + cold plunge</span>
             </div>
-            <div><span style="font-weight:300;">🔥 limited offer</span> <span class="price-tag">$79<small style="font-size:1rem;">/month</small></span></div>
+            <div><span style="font-weight:300;">ðŸ”¥ limited offer</span> <span class="price-tag">$79<small style="font-size:1rem;">/month</small></span></div>
             <button class="btn-purchase"><i class="fas fa-lock-open"></i> PURCHASE MEMBERSHIP</button>
-            <small style="margin-top:10px; opacity:0.8;"><i class="fas fa-phone"></i> 213-555-8742 · @metrofitla</small>
+            <small style="margin-top:10px; opacity:0.8;"><i class="fas fa-phone"></i> 213-555-8742 Â· @metrofitla</small>
           </div>
           <!-- GYM 2: BRICK & BARBELL CHICAGO -->
           <div class="gym-location-card">
             <div class="gym-name"><i class="fas fa-building" style="color:#ff9966;"></i> BRICK & BARBELL</div>
             <div class="gym-address">
               <i class="fas fa-location-dot"></i> 2233 W North Ave, Chicago, IL 60647<br>
-              <small style="opacity:0.8;">⏰ 5am–11pm · warehouse gym</small>
+              <small style="opacity:0.8;">â° 5amâ€“11pm Â· warehouse gym</small>
             </div>
             <div class="gym-details">
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> 6 deadlift platforms</span>
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Rogue / Rep fitness</span>
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Strongman Saturdays</span>
-              <span class="gym-detail-badge"><i class="fas fa-tag"></i> Nutrition coach on‑site</span>
+              <span class="gym-detail-badge"><i class="fas fa-tag"></i> Nutrition coach onâ€‘site</span>
             </div>
             <div><span class="price-tag">$89<small style="font-size:1rem;">/month</small></span> <span style="background:#ff6600; padding:4px 12px; border-radius:60px; font-size:0.8rem; font-weight:600;">no annual fee</span></div>
             <button class="btn-purchase"><i class="fas fa-lock-open"></i> PURCHASE MEMBERSHIP</button>
-            <small style="margin-top:10px; opacity:0.8;"><i class="fas fa-phone"></i> 773-555-2319 · brickbarbellchi</small>
+            <small style="margin-top:10px; opacity:0.8;"><i class="fas fa-phone"></i> 773-555-2319 Â· brickbarbellchi</small>
           </div>
           <!-- GYM 3: IRON VALLEY NYC -->
           <div class="gym-location-card">
             <div class="gym-name"><i class="fas fa-map-marker-alt" style="color:#ff9966;"></i> IRON VALLEY NYC</div>
             <div class="gym-address">
               <i class="fas fa-location-dot"></i> 89-11 Queens Blvd, Queens, NY 11373<br>
-              <small style="opacity:0.8;">⏰ 6:00–22:00 · 20,000 sq ft</small>
+              <small style="opacity:0.8;">â° 6:00â€“22:00 Â· 20,000 sq ft</small>
             </div>
             <div class="gym-details">
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> 18 squat racks</span>
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Kabuki strength bar</span>
-              <span class="gym-detail-badge"><i class="fas fa-tag"></i> Kid‑friendly area</span>
+              <span class="gym-detail-badge"><i class="fas fa-tag"></i> Kidâ€‘friendly area</span>
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> IV drip therapy</span>
             </div>
             <div><span class="price-tag">$99<small style="font-size:1rem;">/month</small></span> <span class="badge">includes 2 PT sessions</span></div>
             <button class="btn-purchase"><i class="fas fa-lock-open"></i> PURCHASE MEMBERSHIP</button>
-            <small style="margin-top:10px; opacity:0.8;"><i class="fas fa-phone"></i> 718-555-4420 · ironvalley.nyc</small>
+            <small style="margin-top:10px; opacity:0.8;"><i class="fas fa-phone"></i> 718-555-4420 Â· ironvalley.nyc</small>
           </div>
           <!-- GYM 4: ALPHA AUSTIN (TEXAS) -->
           <div class="gym-location-card">
             <div class="gym-name"><i class="fas fa-cowboy-hat" style="color:#ff9966;"></i> ALPHA AUSTIN</div>
             <div class="gym-address">
               <i class="fas fa-location-dot"></i> 1200 E 6th St, Austin, TX 78702<br>
-              <small style="opacity:0.8;">⏰ open 24h on weekends</small>
+              <small style="opacity:0.8;">â° open 24h on weekends</small>
             </div>
             <div class="gym-details">
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Specialty strongman</span>
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Axle / logs / yokes</span>
-              <span class="gym-detail-badge"><i class="fas fa-tag"></i> 80’ turf sprint lane</span>
+              <span class="gym-detail-badge"><i class="fas fa-tag"></i> 80â€™ turf sprint lane</span>
               <span class="gym-detail-badge"><i class="fas fa-tag"></i> Cold eucalyptus towel</span>
             </div>
             <div><span class="price-tag">$69<small style="font-size:1rem;">/month</small></span> <span style="background:green; padding:4px 12px; border-radius:60px;">student discount</span></div>
             <button class="btn-purchase"><i class="fas fa-lock-open"></i> PURCHASE MEMBERSHIP</button>
-            <small style="margin-top:10px; opacity:0.8;"><i class="fas fa-phone"></i> 512-555-8711 · alpha_austingym</small>
+            <small style="margin-top:10px; opacity:0.8;"><i class="fas fa-phone"></i> 512-555-8711 Â· alpha_austingym</small>
           </div>
         </div>
         
         <div class="membership-note">
-          <i class="fas fa-shield-alt" style="color:#ff9966;"></i> All gyms verified – purchase connects directly to location. Free day pass with membership purchase.
+          <i class="fas fa-shield-alt" style="color:#ff9966;"></i> All gyms verified â€“ purchase connects directly to location. Free day pass with membership purchase.
         </div>
       </section>
 
@@ -681,7 +710,7 @@
 
   <script>
     // -----------------------------------------------------------------
-    // ********** 100% ORIGINAL SCRIPTS – BACKGROUND, WORKOUT, DRAWER **********
+    // ********** 100% ORIGINAL SCRIPTS â€“ BACKGROUND, WORKOUT, DRAWER **********
     // -----------------------------------------------------------------
     const bgImages = [
       'https://images.unsplash.com/photo-1554284126-aa88f22d8b74',
@@ -714,9 +743,14 @@
       });
     });
 
-    // LOGOUT 
+    // LOGOUT
     const drawerLogout = document.getElementById('drawerLogoutBtn');
-    if (drawerLogout) { drawerLogout.addEventListener('click', (e) => { e.preventDefault(); localStorage.clear(); alert("Logged out."); window.location.href = 'login.html'; }); }
+    if (drawerLogout) {
+      drawerLogout.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = '/Logout';
+      });
+    }
 
     // BMI
     document.getElementById('bmiForm').addEventListener('submit', function(e) {
@@ -761,7 +795,7 @@
       });
     });
 
-    // ---------------------- 🆕 SETTINGS (PROFILE + AVATAR UPLOAD) ----------------------
+    // ---------------------- ðŸ†• SETTINGS (PROFILE + AVATAR UPLOAD) ----------------------
     const settingsLink = document.getElementById('settingsDrawerLink');
     const settingsPanel = document.getElementById('settings-panel-section');
     const closeSettingsBtn = document.getElementById('closeSettingsBtn');
@@ -775,6 +809,7 @@
     const saveProfileBtn = document.getElementById('saveProfileBtn');
     const avatarFileInput = document.getElementById('avatarFileInput');
     const changeAvatarBtn = document.getElementById('changeAvatarBtn');
+    const profileBioInput = document.getElementById('profileBioInput');
 
     function openSettingsPanel() {
       settingsPanel.classList.remove('hidden');
@@ -796,9 +831,47 @@
       const locationEl = document.querySelector('.drawer-profile-text p');
       if (locationEl) locationEl.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${location}`;
     }
-    saveProfileBtn.addEventListener('click', function() { updateUIFromProfile(); alert('✅ Profile updated!'); });
+    saveProfileBtn.addEventListener('click', function() { updateUIFromProfile(); alert('Profile updated!'); });
 
-    // FILE UPLOAD AVATAR – exactly like original settings
+    async function loadLoggedInUser() {
+      try {
+        const response = await fetch('/api/me', { credentials: 'same-origin' });
+        if (response.status === 401) {
+          window.location.href = '/login.html';
+          return;
+        }
+        if (!response.ok) return;
+
+        const user = await response.json();
+        const fullName = (user.name || '').trim() || 'User';
+        const firstName = fullName.split(' ')[0];
+        const location = (user.address || '').trim() || 'FitZone';
+        const goal = user.gender ? ('Goal: ' + user.gender) : 'Goal: Fitness';
+
+        usernameSpan.textContent = firstName;
+        drawerUserName.textContent = fullName;
+        if (profileNameInput) profileNameInput.value = fullName;
+        if (profileLocationInput) profileLocationInput.value = location;
+
+        const locationEl = document.querySelector('.drawer-profile-text p');
+        if (locationEl) locationEl.innerHTML = '<i class="fas fa-map-marker-alt"></i> ' + location;
+
+        const headerSubText = document.querySelector('#welcome-section .header-profile p');
+        if (headerSubText) {
+          const emailText = user.email || '';
+          headerSubText.textContent = (goal + ' · ' + emailText).trim();
+        }
+
+        if (profileBioInput) {
+          const hobbiesText = (user.hobbies || '').trim();
+          if (hobbiesText) profileBioInput.value = 'Hobbies: ' + hobbiesText;
+        }
+      } catch (err) {
+        console.error('Failed to load user profile:', err);
+      }
+    }
+
+    // FILE UPLOAD AVATAR â€“ exactly like original settings
     changeAvatarBtn.addEventListener('click', function() { avatarFileInput.click(); });
     avatarFileInput.addEventListener('change', function(event) {
       const file = event.target.files[0];
@@ -818,7 +891,7 @@
     const toggles = document.querySelectorAll('.toggle-switch');
     toggles.forEach(t => { t.addEventListener('click', function(e) { e.stopPropagation(); this.classList.toggle('toggle-active'); }); });
 
-    // ---------------------- 🆕 MEMBERSHIP (GYM, ADDRESS, PURCHASE) ----------------------
+    // ---------------------- ðŸ†• MEMBERSHIP (GYM, ADDRESS, PURCHASE) ----------------------
     const membershipLink = document.getElementById('membershipDrawerLink');
     const membershipPanel = document.getElementById('membership-panel-section');
     const closeMembershipBtn = document.getElementById('closeMembershipBtn');
@@ -841,7 +914,7 @@
         const gymNameElem = gymCard?.querySelector('.gym-name');
         let gymName = 'this gym';
         if (gymNameElem) gymName = gymNameElem.innerText.trim();
-        alert(`✅ Membership purchased at ${gymName}! \nWelcome to the FitLife family. Your digital pass is ready.`);
+        alert(`âœ… Membership purchased at ${gymName}! \nWelcome to the FitLife family. Your digital pass is ready.`);
       });
     });
 
@@ -850,8 +923,12 @@
       settingsPanel.classList.add('hidden');
       membershipPanel.classList.add('hidden');
       if (usernameSpan.innerText.trim() === '') usernameSpan.innerText = 'Alex';
+      loadLoggedInUser();
     });
   </script>
-  <!-- END – Profile Settings (with file upload avatar) + Offline Gyms Membership – both preserved exactly as requested -->
+  <!-- END â€“ Profile Settings (with file upload avatar) + Offline Gyms Membership â€“ both preserved exactly as requested -->
 </body>
 </html>
+
+
+
