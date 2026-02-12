@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Power Supplements - Premium Gym Nutrition</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #198754;
+      --secondary: #343a40;
+      --accent: #dc3545;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                  url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      min-height: 100vh;
+    }
+     /* Hero Carousel */
+    .hero-carousel {
+      margin-bottom: 30px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+    
+    .carousel-caption {
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+      padding: 20px;
+      bottom: 40px;
+    }
+    
+    .carousel-caption h5 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    
+    .carousel-caption p {
+      font-size: 1.2rem;
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+      width: 5%;
+    }
+
+    .navbar {
+      background-color: rgba(0,0,0,0.9);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.8rem;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      position: relative;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary);
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    
+    .main-container {
+      background-color: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+      margin: 30px auto;
+      padding: 30px;
+    }
+    
+    .page-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--secondary);
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .page-title:after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 4px;
+      background: var(--primary);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    
+    .product-card {
+      background:white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      height: 100%;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--accent);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .product-image-container {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .product-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+    
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+    
+    .product-title {
+      color: var(--secondary);
+      font-weight: 700;
+      margin-bottom: 10px;
+      min-height: 60px;
+    }
+    
+    .product-type {
+      display: inline-block;
+      background-color: #f0f0f0;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    
+    .product-price {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin: 10px 0;
+    }
+    
+    .product-rating {
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+    
+    .product-description {
+      font-size: 14px;
+      color: #666;
+      margin: 15px 0;
+      line-height: 1.6;
+    }
+    
+    .btn-add-cart {
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 50px;
+      transition: all 0.3s;
+      width: 100%;
+    }
+    
+    .btn-add-cart:hover {
+      background: #145c3b;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(25, 135, 84, 0.3);
+    }
+    
+    .cart-count {
+        
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+    .fw-bold{
+        color:#198754
+    }
+    
+    .search-box {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .search-box input {
+      padding-left: 40px;
+      border-radius: 50px;
+      border: 2px solid #ddd;
+    }
+    
+    .search-box i {
+      position: absolute;
+      left: 15px;
+      top: 12px;
+      color: #777;
+    }
+    
+    .filter-btn {
+      margin: 5px;
+      background-color: var(--secondary);
+      color: white;
+      border-radius: 50px;
+      padding: 5px 15px;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    
+    .filter-btn:hover, .filter-btn.active {
+      background-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    
+    .footer {
+      background-color: rgba(0,0,0,0.9);
+      color: white;
+      padding: 40px 0;
+      margin-top: 50px;
+    }
+    
+
+    @media (max-width: 768px) {
+      .product-card {
+        margin-bottom: 20px;
+      }
+      
+      .navbar-brand {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">💪 POWER SUPPLEMENTS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-store"></i> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link position-relative" href="#">
+              <i class="fas fa-shopping-cart"></i> Cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count" id="cart-count-nav">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ <!-- Hero Carousel -->
+  <div class="container hero-carousel">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.muscleandstrength.in/cdn/shop/files/08.png?v=1683769990&width=3840" class="d-block w-100" alt="Supplement Offers">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Summer Sale - Up to 50% Off</h5>
+            <p>Premium supplements for your fitness journey</p>
+            <a href="#" class="btn btn-primary btn-lg">Shop Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.muscleandstrength.in/cdn/shop/files/01_76d20071-be18-4d79-929f-06828e95296c.png?v=1736584206&width=3840" class="d-block w-100" alt="Protein Supplements">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Premium Protein Blends</h5>
+            <p>Fuel your muscles with our high-quality protein formulas</p>
+            <a href="#" class="btn btn-primary btn-lg">View Proteins</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://cdn.shopify.com/s/files/1/0009/1943/7372/t/15/assets/best-supplements-for-gym.jpg?v=1665219876" class="d-block w-100" alt="Protein Supplements">
+          <div class="carousel-caption d-none d-md-block">
+           <h5>New Pre-Workout Formula</h5>
+        <p>Experience explosive energy for your workouts</p>
+            <a href="#" class="btn btn-primary btn-lg">Try Now</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="WhatsApp Image 2025-07-16 at 15.22.05_2c348469.jpg" class="d-block w-100" alt="Protein Supplements">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Enhanced Recovery</h5>
+            <p>Specialized formulas to help you recover faster</p>
+            <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+          </div>
+        </div>
+        
+      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- Main Content -->
+  <div class="container main-container">
+    <h1 class="page-title">PREMIUM GYM SUPPLEMENTS</h1>
+    
+    <!-- Search Box -->
+    <div class="row mb-4">
+      <div class="col-md-6 mx-auto">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" class="form-control" placeholder="Search products..." id="search-input" onkeyup="searchProducts()">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Filter Buttons -->
+    <div class="filter-buttons mb-4">
+      <button class="btn filter-btn active" onclick="filterProducts('all')">All Products</button>
+      <button class="btn filter-btn" onclick="filterProducts('Protein')">Protein</button>
+      <button class="btn filter-btn" onclick="filterProducts('Pre-Workout')">Pre-Workout</button>
+      <button class="btn filter-btn" onclick="filterProducts('Recovery')">Recovery</button>
+      <button class="btn filter-btn" onclick="filterProducts('Fat Loss')">Fat Loss</button>
+      <button class="btn filter-btn" onclick="filterProducts('Performance')">Performance</button>
+      <button class="btn filter-btn" onclick="filterProducts('Vitamins')">Vitamins</button>
+    </div>
+    
+    <!-- Product Grid -->
+    <div class="row" id="product-list">
+      <!-- Products will be inserted here -->
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="text-end mt-4">
+      <button class="btn btn-outline-secondary me-2" onclick="viewCart()">
+        <i class="fas fa-eye"></i> View Cart
+      </button>
+      <button class="btn btn-danger me-3" onclick="clearCart()">
+        <i class="fas fa-trash"></i> Clear Cart
+      </button>
+      <span class="fw-bold">🛒 Items in Cart: <span class="cart-count" id="cart-count">0</span></span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About Power Supplements</h5>
+          <p>Premium quality supplements for athletes and fitness enthusiasts. Scientifically formulated for maximum results.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="dashboard.html" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">Products</a></li>
+            <li><a href="#" class="text-white">About Us</a></li>
+            <li><a href="#" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i> 59001,KLE RLS BELGAUM</p>
+          <p><i class="fas fa-phone me-2"></i> 6363836639</p>
+          <p><i class="fas fa-envelope me-2"></i> info@FitZonesupplement.com</p>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="text-center">
+        <p>&copy; 2023 Power Supplements. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Update the Product Modal in your HTML -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalProductTitle"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="" alt="" class="img-fluid rounded mb-3" id="modalProductImage">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-secondary" id="modalProductType"></span>
+              <div class="product-rating" id="modalProductRating"></div>
+            </div>
+            <h4 class="product-price mb-3" id="modalProductPrice"></h4>
+            <button class="btn btn-primary btn-lg w-100 mb-3" onclick="addCurrentToCart()">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            
+            <div class="card mb-3">
+              <div class="card-header bg-light">
+                <h5 class="mb-0">Key Benefits</h5>
+              </div>
+              <ul class="list-group list-group-flush" id="modalProductBenefits">
+              </ul>
+            </div>
+            
+            <div class="card">
+                
+              <div class="card-header bg-light">
+                <h5 class="mb-0">Available Flavors</h5>
+              </div>
+              <div class="card-body" id="Flavors">
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-7">
+            <div class="card mb-3">
+              <div class="card-header bg-light">
+                <h5 class="mb-0">Product Description</h5>
+              </div>
+              <div class="card-body" id="modalProductDescription">
+              </div>
+            </div>
+            
+            <div class="card mb-3">
+              <div class="card-header bg-light">
+                <h5 class="mb-0">Nutritional Information</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="modalProductNutrition">
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+  <script>
+    // Product Data
+    const products = [
+      {
+        id: 1,
+        name: "Whey Protein Isolate (5lbs)",
+        image: "https://www.corebolics.com/cdn/shop/files/Whey_Gold_2kg_Chocolate_Icecream_Front.png?v=1751354585",
+        description: "Ultra-pure 90% protein content with minimal lactose. Perfect for post-workout recovery with 24g protein per scoop. Contains digestive enzymes for better absorption. Gluten-free and low in carbs.",
+        price: "$49.99",
+        type: "Protein",
+        rating: 4.8,
+        servings: 70,
+        flavors: ["Chocolate", "Vanilla", "Strawberry"],
+        benefits: ["Muscle recovery", "Lean muscle growth", "Quick absorption"]
+      },
+      {
+        id: 2,
+        name: "Creatine Monohydrate (300g)",
+        image: "https://nutriride.com/cdn/shop/files/483.webp?v=1733309943&width=600",
+        description: "Pharmaceutical grade creatine that increases ATP production for explosive strength gains. Clinically proven to enhance performance by up to 15%. Increases muscle volume and power output.",
+        price: "$24.99",
+        type: "Performance",
+        rating: 4.9,
+        servings: 60,
+        benefits: ["Strength increase", "Power output", "Muscle volume"]
+      },
+      {
+        id: 3,
+        name: "BCAA 2:1:1 Formula (400g)",
+        image: "https://m.media-amazon.com/images/I/71bYDOsB8CL.UF1000,1000_QL80.jpg",
+        description: "Optimal ratio of leucine, isoleucine and valine to reduce muscle breakdown during training. Includes electrolytes for hydration support. Unflavored version mixes easily with any beverage.",
+        price: "$32.99",
+        type: "Recovery",
+        rating: 4.7,
+        servings: 80,
+        benefits: ["Reduce muscle breakdown", "Enhance recovery", "Hydration support"]
+      },
+      {
+        id: 4,
+        name: "Nitric Oxide Pre-Workout",
+        image: "https://tfnhealth.com/wp-content/uploads/2023/04/Kevin-Levrone-full-blown-energizer.jpg",
+        description: "Contains 300mg caffeine, 6g citrulline malate and beta-alanine for explosive energy and pumps. No artificial colors or unnecessary fillers. Designed for advanced athletes.",
+        price: "$39.99",
+        type: "Pre-Workout",
+        rating: 4.6,
+        servings: 30,
+        flavors: ["Blue Raspberry", "Fruit Punch", "Sour Apple"],
+        benefits: ["Energy boost", "Muscle pumps", "Focus enhancement"]
+      },
+      {
+        id: 5,
+        name: "Mass Gainer (12lbs)",
+        image: "https://beastlife.in/cdn/shop/files/Image-02kg_Chocolate.jpg?v=1737448188",
+        description: "High calorie formula with 50g protein, 250g carbs and added digestive enzymes per serving. Perfect for hardgainers looking to add quality mass. Includes MCTs for clean energy.",
+        price: "$59.99",
+        type: "Weight Gain",
+        rating: 4.5,
+        servings: 20,
+        benefits: ["Weight gain", "Muscle growth", "Calorie surplus"]
+      },
+      {
+        id: 6,
+        name: "L-Glutamine Powder (500g)",
+        image: "https://5.imimg.com/data5/SELLER/Default/2024/12/474235021/PM/XE/GU/137213647/gat-sports-l-glutamine-high-quality-powder.webp",
+        description: "Supports immune function and reduces muscle soreness. Helps maintain nitrogen balance and prevents catabolism during intense training periods. Mixes easily with no aftertaste.",
+        price: "$22.99",
+        type: "Recovery",
+        rating: 4.4,
+        servings: 100,
+        benefits: ["Immune support", "Muscle recovery", "Gut health"]
+      },
+      {
+        id: 7,
+        name: "Fat Burner Thermogenic",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/8/339019232/OR/DX/VE/195991092/fat-burner-500x500.png",
+        description: "Advanced formula with green tea extract, cayenne pepper and caffeine to boost metabolism and energy levels while suppressing appetite. Supports fat oxidation and thermogenesis.",
+        price: "$37.99",
+        type: "Fat Loss",
+        rating: 4.5,
+        servings: 60,
+        benefits: ["Fat burning", "Metabolism boost", "Appetite control"]
+      },
+      {
+        id: 8,
+        name: "Post-Workout Recovery",
+        image: "https://www.transparentlabs.com/cdn/shop/files/TL_Post_30S_SL_1_1.png?v=1746465868",
+        description: "2:1 carb-to-protein ratio with added glutamine and BCAAs to maximize glycogen replenishment. Reduces cortisol levels post-exercise. Scientifically formulated for optimal recovery.",
+        price: "$34.99",
+        type: "Recovery",
+        rating: 4.8,
+        servings: 30,
+        benefits: ["Glycogen replenishment", "Muscle repair", "Cortisol reduction"]
+      },
+      {
+        id: 9,
+        name: "Casein Protein (4lbs)",
+        image: "https://m.media-amazon.com/images/I/71gk2z736nL.UF1000,1000_QL80.jpg",
+        description: "Slow-digesting protein ideal for nighttime use. Provides sustained amino acid release for up to 7 hours to prevent muscle breakdown. Micellar casein for maximum absorption.",
+        price: "$44.99",
+        type: "Protein",
+        rating: 4.7,
+        servings: 50,
+        flavors: ["Chocolate", "Vanilla", "Cookies & Cream"],
+        benefits: ["Nighttime protein", "Slow digestion", "Muscle preservation"]
+      },
+      {
+        id: 10,
+        name: "Joint Support Complex",
+        image: "https://m.media-amazon.com/images/I/51Pnka8naPL.jpg",
+        description: "Contains glucosamine, chondroitin and MSM to support joint health and reduce inflammation from heavy training. Essential for lifters and athletes with joint stress.",
+        price: "$27.99",
+        type: "Recovery",
+        rating: 4.6,
+        servings: 90,
+        benefits: ["Joint health", "Inflammation reduction", "Mobility support"]
+      },
+      {
+        id: 11,
+        name: "Multivitamin Performance",
+        image: "https://www.maxinutrition.com/cdn/shop/files/Maxi_Multivitamin_047fbfa6-7aa4-453f-91be-90501d6353b2.png?v=1721058907",
+        description: "Comprehensive vitamin and mineral formula optimized for athletes. Includes antioxidants and performance nutrients to support intense training demands and overall health.",
+        price: "$29.99",
+        type: "Vitamins",
+        rating: 4.5,
+        servings: 60,
+        benefits: ["Nutrient support", "Immune function", "Energy metabolism"]
+      },
+      {
+        id: 12,
+        name: "Omega-3 Fish Oil",
+        image: "https://images-cdn.ubuy.co.in/633b0d5aafc59f11214ff6a0-omega-3-fish-oil-2-000mg-pharmaceutical.jpg",
+        description: "High potency EPA/DHA fatty acids to support heart health, brain function and reduce inflammation. Molecularly distilled for purity and no fishy aftertaste.",
+        price: "$24.99",
+        type: "Vitamins",
+        rating: 4.7,
+        servings: 90,
+        benefits: ["Heart health", "Brain function", "Inflammation reduction"]
+      },
+       {
+        id: 13,
+        name: "Natural Test Booster",
+        image: "https://5.imimg.com/data5/SELLER/Default/2023/2/QF/SU/LM/53869928/testosterone-booster-tablet.jpg",
+        description: "Contains tribulus, fenugreek and ashwagandha to support healthy testosterone levels. Increases strength, libido and recovery capacity.",
+        price: "$47.99",
+        type: "Hormonal Support",
+        rating: 4.3,
+        servings: 60
+      },
+      {
+        id:14,
+        name: "Electrolyte Complex (90 tabs)",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2HnZnL-0s0zfcSqsRD2Fch9ShSxta7bXmMA&s",
+        description: "Perfect balance of sodium, potassium and magnesium to prevent cramping during endurance activities. Includes B-vitamins for energy metabolism.",
+        price: "$19.99",
+        type: "Hydration",
+        rating: 4.7,
+        servings: 90
+      },
+      {
+        id:15,
+        name: "CLA Softgels (180ct)",
+        image: "https://challengernutrition.com/cdn/shop/products/CLA-Softgels-90-servings_1024x1024.png?v=1612697010",
+        description: "Conjugated linoleic acid shown in studies to reduce body fat while preserving lean muscle mass. Supports metabolic rate and fat oxidation.",
+        price: "$29.99",
+        type: "Fat Loss",
+        rating: 4.2,
+        servings: 90
+      },
+      {
+        id:16,
+        name: "EAA + Hydration Formula",
+        image: "https://nutrex.com/cdn/shop/files/EAA-LL.png?v=1740081124",
+        description: "All 9 essential amino acids with coconut water powder for intra-workout hydration. Enhances endurance and delays fatigue.",
+        price: "$31.99",
+        type: "Performance",
+        rating: 4.7,
+        servings: 40
+      },
+      {
+        id:17,
+        name: "Vegan Protein Blend",
+        image: "https://www.myprotein.co.in/images?url=https://static.thcdn.com/productimg/original/12323914-2064935310148412.jpg&format=webp&auto=avif&crop=1100,1200,smart",
+        description: "Plant-based protein combining pea, rice and hemp proteins for complete amino acid profile. Dairy-free and easily digestible.",
+        price: "$42.99",
+        type: "Protein",
+        rating: 4.4,
+        servings: 45
+      }
+
+
+    ];
+
+    // DOM Elements
+    const productList = document.getElementById('product-list');
+    const cartCount = document.getElementById('cart-count');
+    const cartCountNav = document.getElementById('cart-count-nav');
+    const searchInput = document.getElementById('search-input');
+    
+    // State
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let currentProduct = null;
+    
+    // Initialize
+    updateCartCount();
+    displayProducts(products);
+    
+    // Display Products
+    function displayProducts(productsToDisplay) {
+      productList.innerHTML = '';
+      
+      if (productsToDisplay.length === 0) {
+        productList.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <h4>No products found</h4>
+            <p>Try adjusting your search or filters</p>
+          </div>
+        `;
+        return;
+      }
+      
+      productsToDisplay.forEach(product => {
+        const col = document.createElement('div');
+        col.className = 'col-md-4 col-sm-6 mb-4';
+        
+        // Generate star rating
+        const stars = '★'.repeat(Math.floor(product.rating)) + '☆'.repeat(5 - Math.floor(product.rating));
+        const isInCart = cart.some(item => item.id === product.id);
+        
+        col.innerHTML = `
+          <div class="product-card">
+            ${product.type === 'Protein' ? '<span class="product-badge">BESTSELLER</span>' : ''}
+            <div class="product-image-container">
+              <img src="${product.image}" alt="${product.name}" class="product-image">
+            </div>
+            <h5 class="product-title">${product.name}</h5>
+            <span class="product-type">${product.type}</span>
+            <div class="product-price">${product.price}</div>
+            <div class="product-rating">${stars} (${product.rating})</div>
+            <p class="product-description">${product.description.substring(0, 100)}...</p>
+            <button class="btn btn-add-cart" onclick="addToCart(${product.id})" ${isInCart ? 'disabled' : ''}>
+              ${isInCart ? '<i class="fas fa-check"></i> Added' : '<i class="fas fa-cart-plus"></i> Add to Cart'}
+            </button>
+            <button class="btn btn-link w-100 mt-2" onclick="viewProductDetails(${product.id})">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+        `;
+
+        productList.appendChild(col);
+      });
+    }
+    
+    // Filter Products
+    function filterProducts(type) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      if (type === 'all') {
+        displayProducts(products);
+      } else {
+        const filteredProducts = products.filter(product => product.type === type);
+        displayProducts(filteredProducts);
+      }
+    }
+    
+    // Search Products
+    function searchProducts() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const filteredProducts = products.filter(product => 
+        product.name.toLowerCase().includes(searchTerm) || 
+        product.description.toLowerCase().includes(searchTerm) ||
+        product.type.toLowerCase().includes(searchTerm)
+      );
+      displayProducts(filteredProducts);
+    }
+    
+    // Add to Cart
+    function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  if (product) {
+    cart.push(product);
+    saveCart();
+    updateCartCount();
+    displayProducts(getCurrentDisplayedProducts());
+    
+    // ✅ Use backticks for template literals
+    showToast(`${product.name} added to cart!`);
+  }
+}
+
+// View Cart
+function viewCart() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
+  // ✅ Use backticks for template literals
+  alert(`You have ${cart.length} items in your cart. Total: $${calculateTotal().toFixed(2)}`);
+}
+
+    // Clear Cart
+    function clearCart() {
+      if (cart.length === 0) {
+        alert('Your cart is already empty!');
+        return;
+      }
+      
+      if (confirm('Are you sure you want to clear your cart?')) {
+        cart = [];
+        saveCart();
+        updateCartCount();
+        displayProducts(getCurrentDisplayedProducts());
+        showToast('Cart cleared!');
+      }
+    }
+    
+   // View Product Details
+function viewProductDetails(productId) {
+  currentProduct = products.find(p => p.id === productId);
+  if (!currentProduct) return;
+
+  const stars = '★'.repeat(Math.floor(currentProduct.rating)) + 
+                '☆'.repeat(5 - Math.floor(currentProduct.rating));
+
+  document.getElementById('modalProductTitle').textContent = currentProduct.name;
+  document.getElementById('modalProductImage').src = currentProduct.image;
+  document.getElementById('modalProductType').textContent = currentProduct.type;
+  document.getElementById('modalProductPrice').textContent = currentProduct.price;
+  
+  // ✅ FIXED: use backticks for template string
+  document.getElementById('modalProductRating').innerHTML = `${stars} (${currentProduct.rating})`;
+
+  document.getElementById('modalProductDescription').textContent = currentProduct.description;
+
+  // Initialize modal
+  const modal = new bootstrap.Modal(document.getElementById('productModal'));
+  modal.show();
+}
+
+    
+    // Add current product to cart from modal
+    function addCurrentToCart() {
+      if (currentProduct) {
+        addToCart(currentProduct.id);
+        const modal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+        modal.hide();
+      }
+    }
+    
+    // Helper Functions
+    function updateCartCount() {
+      const count = cart.length;
+      cartCount.textContent = count;
+      cartCountNav.textContent = count;
+    }
+    
+    function saveCart() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    
+    function calculateTotal() {
+      return cart.reduce((total, product) => {
+        return total + parseFloat(product.price.replace('$', ''));
+      }, 0);
+    }
+    
+    function getCurrentDisplayedProducts() {
+      const activeFilter = document.querySelector('.filter-btn.active').textContent;
+      const searchTerm = searchInput.value.toLowerCase();
+      
+      let displayedProducts = products;
+      
+      if (activeFilter !== 'All Products') {
+        displayedProducts = products.filter(p => p.type === activeFilter);
+      }
+      
+      if (searchTerm) {
+        displayedProducts = displayedProducts.filter(product => 
+          product.name.toLowerCase().includes(searchTerm) || 
+          product.description.toLowerCase().includes(searchTerm) ||
+          product.type.toLowerCase().includes(searchTerm)
+        );
+      }
+      
+      return displayedProducts;
+    }
+    
+    function showToast(message) {
+      // In a real app, you'd use a proper toast notification
+      alert(message);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
