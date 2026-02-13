@@ -113,7 +113,9 @@ app.post('/LoginValidation', (req, res) => {
     con.query(sql, [uname, uname], function (err, result) {
         if (err) {
             console.error('Login error:', err);
-            return res.status(500).send(`Database error (${err.code || 'unknown'})`);
+            const code = err.code || 'unknown';
+            const message = err.message || 'Database error';
+            return res.status(500).send(`Database error (${code}): ${message}`);
         }
 
         if (result.length === 0) {
